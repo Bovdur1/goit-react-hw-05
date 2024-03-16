@@ -1,10 +1,18 @@
 const MovieCard = ({ movieData }) => {
-  const { title, backdrop_path, vote_average, popularity } = movieData;
+  const { title, poster_path, vote_average, popularity } = movieData;
+  const defaultImg =
+    "https://dl-media.viber.com/10/share/2/long/vibes/icon/image/0x0/95e0/5688fdffb84ff8bed4240bcf3ec5ac81ce591d9fa9558a3a968c630eaba195e0.jpg";
+
   return (
     <>
       <img
-        src={`https://image.tmdb.org/t/p/w500${backdrop_path}`}
-        alt="movie_img"
+        src={
+          movieData.poster_path
+            ? `https://image.tmdb.org/t/p/w300${poster_path}`
+            : defaultImg
+        }
+        width={250}
+        alt="poster"
       />
       <h2>{title}</h2>
       <p>Rating: {vote_average}</p>
@@ -14,19 +22,3 @@ const MovieCard = ({ movieData }) => {
 };
 
 export default MovieCard;
-
-// adult: false;
-// backdrop_path: "/mSDsSDwaP3E7dEfUPWy4J0djt4O.jpg";
-// genre_ids: [16, 10751, 14];
-// id: 129;
-// media_type: "movie";
-// original_language: "ja";
-// original_title: "千と千尋の神隠し";
-// overview: "A young girl, Chihiro, becomes trapped in a strange new world of spirits. When her parents undergo a mysterious transformation, she must call upon the courage she never knew she had to free her family.";
-// popularity: 152.967;
-// poster_path: "/39wmItIWsg5sZMyRUHLkWBcuVCM.jpg";
-// release_date: "2001-07-20";
-// title: "Spirited Away";
-// video: false;
-// vote_average: 8.541;
-// vote_count: 15652;

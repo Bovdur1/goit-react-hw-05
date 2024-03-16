@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import SearchBox from "../components/SearchBox/SearchBox";
 import { searchMovies } from "../movie-api";
 import { useSearchParams } from "react-router-dom";
-import SearchMoviesList from "../components/SearchMoviesList/SearchMoviesList";
+import MoviesList from "../components/MoviesList/MoviesList";
 
 const Movies = () => {
   const [movies, setMovies] = useState([]);
@@ -12,19 +12,21 @@ const Movies = () => {
 
   useEffect(() => {
     if (!query) return;
-
     const getSearchMovies = async () => {
-      const response = await searchMovies(query);
-      setMovies(response.results);
+      try {
+        const response = await searchMovies(query);
+        setMovies(response.results);
+      } catch (e) {
+        console.error(e);
+      }
     };
-
     getSearchMovies();
   }, [query]);
 
   return (
     <>
       <SearchBox />
-      <SearchMoviesList movies={movies} />
+      <MoviesList movies={movies} />
     </>
   );
 };
