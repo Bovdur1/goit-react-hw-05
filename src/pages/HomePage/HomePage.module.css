@@ -1,0 +1,22 @@
+.titleWrapper {
+    padding: 16px 8px;
+    border-bottom: 1px solid #f7f6f147;
+    margin-bottom: 16px;
+}
+
+.title {
+    display: inline-block;
+    position: relative;
+}
+
+.title::after {
+    display: block;
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    content: '';
+    height: 3px;
+    width: 100%;
+    background-color: #ff7171;
+    border-radius: 4px;
+}

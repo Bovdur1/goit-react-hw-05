@@ -1,0 +1,34 @@
+.section {
+    padding: 32px 0;
+}
+
+.input {
+    display: inline-block;
+    width: 600px;
+    padding: 12px;
+    border: none;
+    outline: none;
+    border-radius: 12px 0 0 12px;
+    background-color: #333333;
+}
+
+.submitBtn {
+    border: none;
+    background-color: #fd5050;
+    font-weight: 500;
+    padding: 12px;
+    text-align: center;
+    outline: none;
+    cursor: pointer;
+    border-radius: 0 12px 12px 0;
+    transition: background-color 250ms;
+}
+
+.input:focus {
+    background-color: #4c4c4c;
+}
+
+.submitBtn:hover,
+.submitBtn:focus {
+    background-color: #fe6c6c;
+}

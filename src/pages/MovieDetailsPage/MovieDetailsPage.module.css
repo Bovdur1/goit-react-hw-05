@@ -1,0 +1,25 @@
+.nav {
+    display: flex;
+    justify-content: center;
+    gap: 32px;
+    padding: 16px;
+}
+
+.navLink {
+    font-weight: 500;
+    font-size: 20px;
+    padding: 0 4px;
+    position: relative;
+}
+
+.navLinkActive::after {
+    display: block;
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    content: '';
+    height: 3px;
+    width: 100%;
+    background-color: #ff7171;
+    border-radius: 4px;
+}

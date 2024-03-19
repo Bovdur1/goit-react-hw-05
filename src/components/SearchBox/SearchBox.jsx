@@ -1,4 +1,5 @@
 import { useSearchParams } from "react-router-dom";
+import css from "./SearchBox.module.css";
 
 const SearchBox = () => {
   const [, setSearchParams] = useSearchParams();
@@ -16,14 +17,23 @@ const SearchBox = () => {
   };
 
   return (
-    <div>
-      <form onSubmit={handleSubmit}>
-        <div>
-          <input type="text" name="search" />
-          <button type="submit">Search</button>
-        </div>
-      </form>
-    </div>
+    <section className={css.section}>
+      <div>
+        <form onSubmit={handleSubmit}>
+          <div>
+            <input
+              type="text"
+              name="search"
+              className={css.input}
+              placeholder="Search for movie..."
+            />
+            <button type="submit" className={css.submitBtn}>
+              Search
+            </button>
+          </div>
+        </form>
+      </div>
+    </section>
   );
 };
 

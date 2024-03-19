@@ -1,0 +1,22 @@
+.background {
+    background-image: linear-gradient(90deg, rgba(56, 37, 37, 0.95), rgba(88, 58, 58, 0.5)), url('https://image.tmdb.org/t/p/original/nb3xI8XI3w4pMVZ38VijbsyBqP4.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    max-width: 1280px;
+    border-radius: 0 0 40px 40px;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 32px;
+    gap: 20px;
+}
+
+.title {
+    font-size: 72px;
+}
+
+.article {
+    font-size: 32px;
+}

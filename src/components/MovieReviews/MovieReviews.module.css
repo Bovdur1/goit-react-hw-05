@@ -1,0 +1,31 @@
+.list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-bottom: 40px;
+}
+
+.item {
+    display: block;
+    background-color: #333333;
+    border-radius: 20px;
+    padding: 24px;
+}
+
+.author {
+    color: #f99898;
+}
+
+.reviewInfo {
+    display: flex;
+    gap: 8px;
+}
+
+.content {
+    color: #f7f6f199;
+    padding: 8px 0;
+}
+
+.notFoundMsg {
+    margin: 16px;
+}

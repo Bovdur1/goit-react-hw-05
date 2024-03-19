@@ -1,0 +1,19 @@
+.list {
+    padding: 10px 25px;
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.item {
+    width: calc((100% - 180px) / 7);
+}
+
+.character {
+    font-size: 14px;
+    color: #f7f6f1b7;
+}
+
+.notFoundMsg {
+    margin: 16px;
+}

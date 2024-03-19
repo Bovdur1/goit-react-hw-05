@@ -1,0 +1,51 @@
+.header {
+    position: relative;
+    z-index: 999;
+    width: 100%;
+    color: #f7f6f1;
+    display: flex;
+    justify-content: center;
+    border-bottom: 1px solid #f7f6f147;
+    background-color: #333333;
+    box-shadow: 0px 10px 32px 0px rgba(247, 246, 241, 0.2);
+}
+
+.wrapper {
+    display: flex;
+    align-items: center;
+    width: 1280px;
+    padding: 8px 0;
+    gap: 60px;
+}
+
+.nav {
+    display: flex;
+    gap: 28px;
+}
+
+.logo {
+    font-size: 30px;
+    font-family: "Syne", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    letter-spacing: 0.03em;
+    color: #fd5050;
+}
+
+.navLink {
+    font-weight: 500;
+    font-size: 16px;
+    position: relative;
+}
+
+.navLinkActive::after {
+    display: block;
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    content: '';
+    height: 3px;
+    width: 100%;
+    background-color: #ff7171;
+    border-radius: 4px;
+}
