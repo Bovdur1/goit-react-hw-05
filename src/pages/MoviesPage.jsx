@@ -19,7 +19,6 @@ const Movies = () => {
         setIsloading(true);
         const response = await searchMovies(query);
         setMovies(response.results);
-        console.log(response);
       } catch (e) {
         console.error(e);
       } finally {
